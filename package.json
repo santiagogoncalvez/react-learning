@@ -1,0 +1,13 @@
+{
+  "name": "react-learning",
+  "version": "1.0.0",
+  "description": "Este repositorio reúne todo mi proceso de aprendizaje en **React**.  \r Incluye **apuntes, ejemplos, ejercicios, mini-proyectos y recursos útiles**, organizados para practicar y mejorar progresivamente.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
