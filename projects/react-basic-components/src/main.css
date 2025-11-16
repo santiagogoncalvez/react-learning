@@ -1,0 +1,61 @@
+* {
+  font-family: system-ui;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+}
+
+button {
+  border-radius: 5px;
+  /* border: 1px solid #cfcfcfff; */
+  border: 0px solid;
+  background-color: rgb(230, 230, 230);
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+}
+
+select{
+  border-radius: 5px;
+  border: 1px solid rgb(185, 185, 185);
+  padding: 6px 15px;
+}
+
+.dnd {
+  width: fit-content;
+}
+
+.dndItem {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.dndIcon {
+  height: 30px;
+  width: 30px;
+}

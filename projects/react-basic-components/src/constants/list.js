@@ -1,0 +1,17 @@
+export const INITIAL_LIST = [
+    {
+        id: '1',
+        firstName: 'Robin',
+        lastName: 'Wieruch',
+    },
+    {
+        id: '2',
+        firstName: 'Aiden',
+        lastName: 'Kettel',
+    },
+    {
+        id: '3',
+        firstName: 'Jannet',
+        lastName: 'Layn',
+    },
+];
