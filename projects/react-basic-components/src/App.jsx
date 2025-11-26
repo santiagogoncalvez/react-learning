@@ -5,13 +5,14 @@ import DropdownWithSelect from './components/DropdownWithSelect.jsx';
 import Dropdown from './components/Dropdown.jsx';
 import DnDList from './components/DnDList.jsx';
 import DnDListWithLib from './components/DnDListWhitLib.jsx';
+import Slider from './components/Slider.jsx';
 
 import { stories } from './constants/stories.js';
 import { INITIAL_LIST } from './constants/list.js';
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <Button
         type="button"
         disabled={false}
@@ -79,6 +80,15 @@ function App() {
           border: '1px solid #cfcfcfff',
           borderRadius: '16px',
         }}
+      />
+
+      <hr />
+
+      <Slider
+        initial={20}
+        max={25}
+        formatFn={(number) => number.toFixed(2)}
+        onChange={(value) => console.log(value.toFixed(2))}
       />
     </div>
   );
