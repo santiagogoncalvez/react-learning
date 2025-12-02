@@ -1,0 +1,150 @@
+.app {
+  width: 700px;
+}
+
+.app h1 {
+  margin-top: 16px;
+}
+
+.searchForm {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 8px;
+}
+
+.searchForm .searchQuery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 56.47px;
+}
+
+.searchForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.75rem 1rem;
+}
+
+.news {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --- Layout desktop --- */
+.storyLink {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.storyLink:hover {
+  text-decoration: none;
+}
+
+.storyLink span {
+  color: var(--black);
+}
+
+.removeButton {
+  padding:5px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.removeButton {
+  background-color: var(--white);
+  color: var(--light-primary);
+}
+
+.removeButton:focus {
+  border: 2px solid black;
+}
+
+.removeButton:active {
+  border: 0px solid;
+}
+
+.storyLink .storyLinkText {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.storyLink:hover:not(:has(button:hover)) .storyLinkText {
+  text-decoration: underline;
+}
+
+.story button:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+.storyLinkData {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.story .storyLinkInfo {
+  display: flex;
+  gap: 16px;
+}
+
+.label {
+  color: var(--gray);
+}
+.story .storyLink .storyLinkInfo .label {
+  color: var(--gray);
+}
+
+
+/* --- ✔ Responsive para pantallas verticales / móviles --- */
+@media (max-width: 600px) {
+  .story {
+    padding: 16px 20px;
+  }
+
+  .story .storyLink {
+    flex-direction: column; /* de horizontal → vertical */
+    align-items: flex-start; /* izquierda */
+    gap: 16px; /* mayor espacio táctil */
+  }
+
+  .story .storyLinkText {
+    font-size: 1.15rem;
+  }
+
+  .storyLinkInfo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* si no entra, baja */
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  .storyLinkInfo .label {
+    font-size: 0.9rem;
+  }
+}
+
+hr {
+  border-radius: 5px;
+}

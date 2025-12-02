@@ -1,0 +1,17 @@
+.searchControls {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+@media (max-width: 600px) {
+  .searchControls {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+hr {
+  border-radius: 5px;
+}

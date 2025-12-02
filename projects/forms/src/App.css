@@ -1,0 +1,14 @@
+.app {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.formControlled {
+   width: 200px;
+   padding: 40px 80px;
+   background-color: #2c3a49;
+   border-radius: 6px;
+   border: 1px solid transparent;
+}

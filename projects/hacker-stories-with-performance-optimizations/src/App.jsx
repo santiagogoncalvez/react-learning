@@ -1,0 +1,107 @@
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
+import { useStorageState } from './hooks/useStorageState';
+import List from './components/List.jsx';
+import SearchForm from './components/SearchForm.jsx';
+import { storiesReducer } from './reducers/storiesReducer.js';
+import { getAsyncStories } from './services/getAsyncStories.js';
+import './App.css';
+
+const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?tags=story&query=';
+
+const API_ENDPOINT_LAST_STORIES =
+  'http://hn.algolia.com/api/v1/search_by_date?tags=story';
+
+const getSumComments = (stories) => {
+  console.log('C');
+  return stories.data.reduce((result, value) => result + value.numComments, 0);
+};
+
+const App = () => {
+  console.log('B:App');
+
+  const [search, setSearch] = useStorageState('search', '');
+
+  const [url, setUrl] = useState(
+    search ? `${API_ENDPOINT}${search}` : API_ENDPOINT_LAST_STORIES,
+  );
+  const [stories, dispatchStories] = useReducer(storiesReducer, {
+    data: [],
+    isLoading: false,
+    isError: false,
+  });
+
+  const getNews = useCallback(async ({ url }) => {
+    if (!url) return;
+    dispatchStories({ type: 'STORIES_FETCH_INIT' });
+
+    try {
+      const stories = await getAsyncStories({ url });
+      dispatchStories({
+        type: 'STORIES_FETCH_SUCCESS',
+        payload: stories || [],
+      });
+    } catch (e) {
+      dispatchStories({ type: 'STORIES_FETCH_FAILURE' });
+    }
+  }, []);
+
+  // Hacer petición de datos de historias
+  useEffect(() => {
+    getNews({ url });
+  }, [url, getNews]);
+
+  const handleSearchInput = useCallback(
+    (event) => {
+      setSearch(event.target.value);
+    },
+    [setSearch],
+  );
+
+  const searchAction = useCallback(() => {
+    setUrl(`${API_ENDPOINT}${search}`);
+  }, [setUrl, search]);
+
+  const handleRemoveStory = useCallback((item) => {
+    dispatchStories({ type: 'REMOVE_STORY', payload: item });
+  }, []);
+
+  const sumComments = useMemo(() => getSumComments(stories), [stories]);
+
+  return (
+    <div className="app">
+      <h1>Hacker Stories</h1>
+
+      <div className="searchControls">
+        <SearchForm
+          search={search}
+          handleSearchInput={handleSearchInput}
+          action={searchAction}
+        />
+      </div>
+
+      <hr />
+      {!stories.isError && (
+        <p>
+          <span className="label">Total comments:</span> {sumComments}
+        </p>
+      )}
+
+      {stories.isLoading ? (
+        <img src="/loading.gif" alt="Loading..." width="30" height="30" />
+      ) : (
+        <List list={stories.data} removeItem={handleRemoveStory} />
+      )}
+
+      {stories.isError && <p>Something went wrong...</p>}
+    </div>
+  );
+};
+
+export default App;
