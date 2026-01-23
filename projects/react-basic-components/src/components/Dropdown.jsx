@@ -23,7 +23,7 @@ const Dropdown = ({ options, label, selectedOption }) => {
       </button>
       {/* Opciones que se renderizan condicionalmente */}
       {open && (
-        <ul role="listbox">
+        <ul role="listbox" style={{position: 'absolute'}}>
           {options.map((option) => {
             return (
               <li key={option.objectID} role="option">

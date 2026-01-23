@@ -1,87 +1,123 @@
 # ⚛️ React Learning Hub
 
-Este repositorio reúne todo mi proceso de aprendizaje en **React**.  
-Incluye **apuntes, ejemplos, ejercicios, mini-proyectos y recursos útiles**, organizados para practicar y mejorar progresivamente.
+Este repositorio reúne mi proceso de aprendizaje en **React**.
+Funciona como un espacio central de práctica donde exploro conceptos clave, patrones, hooks, estilos, performance y herramientas del ecosistema moderno de React.
 
 ---
 
-## 📚 Contenido
+## 📚 Contenido principal
 
--  🧠 **Conceptos base**
-   -  JSX, componentes, props
-   -  Estado, eventos y renderizado condicional
--  🎛️ **Hooks esenciales**
-   -  useState, useEffect, useRef, custom hooks
--  🧩 **Ejemplos y patrones**
-   -  Buenas prácticas, reutilización de componentes, lógica común
--  ⚙️ **Ecosistema React**
-   -  Vite, React Router, Zustand, React Query, etc.
--  🧪 **Playground / Experimentación**
-   -  Pruebas rápidas, snippets, ideas sueltas
--  💡 **Mini-proyectos**
-   -  Ejercicios prácticos de pequeña escala
+### 🧠 Fundamentos de React
+- JSX y componentes
+- Props y composición
+- Estado, eventos y renderizado condicional
+- Separación de lógica y presentación
 
-> Todo está organizado por carpetas para poder explorar cada tema fácilmente 📁
+### 🎛️ Hooks
+- useState
+- useEffect
+- useRef
+- Custom Hooks
+- Manejo de efectos y ciclos de vida
+
+### 🧩 Patrones y buenas prácticas
+- Reutilización de componentes
+- Separación de responsabilidades
+- Organización de carpetas
+- Limpieza y legibilidad del código
+
+### ⚙️ Ecosistema React
+- Vite
+- ESLint
+- CSS Modules
+- Styled Components
+- Optimización de performance
+- Gestión de estilos y arquitectura
+
+### 🧪 Playground / Experimentación
+- Pruebas rápidas
+- Snippets
+- Ideas sueltas
+- Experimentos aislados
 
 ---
 
-## 🚀 Propósito
+## 📂 Proyectos y ejercicios
 
-> Consolidar conocimientos de React con práctica constante, documentación personal y pequeños retos de código.
+Cada carpeta es **independiente** y está enfocada en un concepto o práctica específica.
 
-Este repositorio no es un proyecto único, sino un espacio para **aprender haciendo**.
+### 🔹 Bases y fundamentos
+- **react-from-scratch** — React desde cero sin abstracciones
+- **react-bases** — Conceptos base de React
+- **react-basic-components** — Componentes simples y composición
+
+### 🔹 Estado y listas
+- **list-add-item** — Agregar elementos a una lista
+- **list-remove-item** — Eliminar elementos
+- **list-update-item** — Actualizar estado
+- **add-update-remove-items** — CRUD básico de listas
+
+### 🔹 Hooks y lógica
+- **hook-check-if-overflow** — Custom hook para detectar overflow
+- **image-from-react-component** — Renderizado dinámico de imágenes
+
+### 🔹 Formularios
+- **forms** — Prácticas con formularios y control de inputs
+
+### 🔹 ESLint y calidad de código
+- **eslint-tutorial** — Configuración y buenas prácticas con ESLint
+
+### 🔹 Hacker Stories (variantes)
+- **hacker-stories-with-css-modules** — Estilos con CSS Modules
+- **hacker-stories-with-styled-components** — Styled Components
+- **hacker-stories-with-performance-optimizations** — Optimización y memoización
 
 ---
 
-## ✅ Roadmap personal
+## 🚀 Propósito del repositorio
+
+- Consolidar conocimientos de React con práctica constante
+- Documentar mi aprendizaje de forma ordenada
+- Explorar distintas soluciones para un mismo problema
+- Mejorar calidad, estructura y performance del código
+
+Este repositorio evolucionó junto con mi aprendizaje.
+
+---
+
+## 🛣️ Roadmap personal
 
 ### Fundamentos
-
--  [x] JSX y componentes
--  [x] Props y composición
--  [x] Estado y eventos
--  [ ] Renderizado condicional
--  [ ] Estilos en React
+- [x] JSX y componentes
+- [x] Props y composición
+- [x] Estado y eventos
+- [x] Renderizado condicional
+- [x] Estilos en React
 
 ### Hooks
-
--  [x] useState
--  [ ] useEffect
--  [ ] useRef
--  [ ] Custom Hooks
+- [x] useState
+- [x] useEffect
+- [x] useRef
+- [x] Custom Hooks
 
 ### Ecosistema
-
--  [ ] React Router
--  [ ] Estado global (Zustand, Context)
--  [ ] Fetching de datos
--  [ ] Buenas prácticas de performance
-
----
-
-## 🧪 Ejemplos y ejercicios
-
-| Ejercicio / Demo  | Estado         | Descripción                |
-| ----------------- | -------------- | -------------------------- |
-| Primer componente | ✅ Completado  | Primer render con JSX      |
-| Contador          | 🟡 En progreso | Manejo de estado y eventos |
-| Tic Tac Toe       | 🟢 En práctica | Juego simple con hooks     |
-| ...               | —              | —                          |
+- [x] Vite
+- [x] ESLint
+- [x] Manejo de estilos
 
 ---
 
 ## 📝 Notas y recursos
 
-Apuntes, lecturas y tips para repasar:
-
--  🧩 Conceptos clave de React
--  ⚙️ Herramientas del ecosistema
--  💡 Patrones y buenas prácticas
--  🐛 Errores comunes y soluciones
+Incluye apuntes personales sobre:
+- Conceptos clave de React
+- Herramientas del ecosistema
+- Patrones y buenas prácticas
+- Errores comunes y soluciones
 
 ---
 
-## 🤝 Contribución y mejora
+## 🤝 Contribución
 
-Este repo es **personal y en constante crecimiento**.  
-Si encontrás ideas o sugerencias, ¡toda ayuda es bienvenida! 🙌
+Repositorio personal y en constante crecimiento.
+Si encontrás ideas, mejoras o sugerencias, ¡son bienvenidas! 🙌
